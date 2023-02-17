@@ -18,7 +18,6 @@ NAME = "Percia Jhun"
 NAME_READING = "ペルシア　ジュン"
 DESCRIPTION = """
 職業と学習を両立出来るほど時間管理能力に自身があり、AIエンジニアを目指してるものです。
-ＩＴパスポート、日本語能力試験N2合格
 """
 
 EMAIL = "perciajhun1009@gmail.com"
@@ -93,13 +92,6 @@ st.write("#")
 cols = st.columns(len(SOCIAL_MEDIA))
 for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
     cols[index].write(f"[{platform}]({link})")
-
-# --- TECHNICAL SKILLS ---
-st.write("#")
-st.subheader("専門知識・技術・能力の内容")
-st.write("---")
-for skill in TECHNICAL_SKILLS:
-    st.write(f"- {skill}")
     
 # --- CERTIFICATIONS JAPAN ---
 st.write("#")
@@ -108,7 +100,13 @@ st.write("---")
 for cert, year in CERTIFICATIONS.items():
     st.write(f"{cert} - {year}")
 
-
+# --- TECHNICAL SKILLS ---
+st.write("#")
+st.subheader("専門知識・技術・能力の内容")
+st.write("---")
+for skill in TECHNICAL_SKILLS:
+    st.write(f"- {skill}")
+    
 # --- PROJECT LIST ---
 st.write("#")
 st.subheader("現行プロジェクトリスト")
