@@ -14,7 +14,8 @@ profile_pic = current_dir / "assets" / "kingkoala.jpg"
 
 PAGE_TITLE = "ディジタル経歴 | ペルシア ジュン"
 PAGE_ICON = ":wave:"
-NAME = "ペルシア　ジュン"
+NAME = "Percia Jhun"
+NAME_READING = "ペルシア　ジュン"
 DESCRIPTION = """
 職業と学習を両立出来るほど時間管理能力に自身があり、AIエンジニアを目指してるものです。
 ＩＴパスポート、日本語能力試験N2合格
@@ -38,6 +39,11 @@ TECHNICAL_SKILLS = [
     "✔️ＩＴセキュリティ, 暗号化",
     "✔️データ管理、復旧,ラングリング、分析、視覚化"
 ]
+
+CERTIFICATIONS = {
+    "👍　ＩＴパスポート" : "2023年2月",
+    "👍　日本語能力試験N2合格" : "2022年7月"
+}
 
 SOCIAL_MEDIA = {
     "GitHub" : "https://github.com/kingkoala20",
@@ -66,6 +72,7 @@ with col1:
     
 with col2:
     st.title(NAME)
+    st.subheader(NAME_READING)
     st.write(DESCRIPTION)
     st.download_button(
         label="📄 履歴書ダウンロード",
@@ -93,6 +100,13 @@ st.subheader("専門知識・技術・能力の内容")
 st.write("---")
 for skill in TECHNICAL_SKILLS:
     st.write(f"- {skill}")
+    
+# --- CERTIFICATIONS JAPAN ---
+st.write("#")
+st.subheader("資格")
+st.write("---")
+for cert, year in CERTIFICATIONS.items():
+    st.write(f"{cert} - {year}")
 
 
 # --- PROJECT LIST ---
