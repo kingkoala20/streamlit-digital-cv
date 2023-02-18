@@ -8,7 +8,7 @@ current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles" / "main.css"
 resume_file = current_dir / "assets" / "履歴書.pdf"
 work_history_file = current_dir / "assets" / "職務経歴書.pdf"
-profile_pic = current_dir / "assets" / "kingkoala.jpg"
+profile_pic = current_dir / "assets" / "ppresume.png"
 
 # --- GENERAL SETTINGS ---
 
